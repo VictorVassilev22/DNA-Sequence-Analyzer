@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FxComponents.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane prefHeight="548.0" prefWidth="574.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="319.0" minHeight="10.0" prefHeight="303.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextArea fx:id="informationTxt" editable="false" accessibleRole="IMAGE_VIEW" prefHeight="150.0" prefWidth="574.0" text="&#10;" GridPane.rowIndex="3" />
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="loadSequenceBtn" mnemonicParsing="false" onAction="#loadSequenceBtnOnAction" prefHeight="25.0" prefWidth="99.0" text="Load Sequence" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="clearSequenceBtn" mnemonicParsing="false" onAction="#clearSequenceBtnOnAction" prefHeight="25.0" prefWidth="101.0" text="Clear Sequence" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="450.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextArea fx:id="sampleSourceTxt" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+               </children>
+            </GridPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sequence:" wrappingWidth="95.13671875" />
+            <Button fx:id="formatSequenceBtn" mnemonicParsing="false" onAction="#formatSequenceBtnOnAction" prefHeight="25.0" prefWidth="134.0" text="Format Sequence" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#quitBtnOnAction" prefHeight="25.0" prefWidth="125.0" text="Quit" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="425.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="computeSequencePropertiesBtn" mnemonicParsing="false" onAction="#computeSequencePropertiesBtnOnAction" prefHeight="25.0" prefWidth="237.0" text="Compute Sequence Properties" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="175.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
